@@ -33,13 +33,13 @@ In low- and middle-income countries, **1 in 10 medical products** fails quality 
 
 ## ✨ Key Features
 
-| Feature                  | Description                                                                          |
-| :----------------------- | :----------------------------------------------------------------------------------- |
-| **🔗 Base Integration**  | Immutable, fast, and low-cost record-keeping for every drug batch.                   |
-| **📱 Omni-Device**       | QR scanning for smartphones + **USSD codes** for feature phones (No internet needed). |
-| **🛡️ Tamper-Proof**      | Decentralized ledger prevents unauthorized alteration of medicine data.              |
-| **🎁 Reward System**     | Users report fakes and earn **ETH rewards**, incentivizing community vigilance.       |
-| **🌍 Africa-First**      | Optimized for low-bandwidth and offline environments.                                |
+| Feature                 | Description                                                                           |
+| :---------------------- | :------------------------------------------------------------------------------------ |
+| **🔗 Base Integration** | Immutable, fast, and low-cost record-keeping for every drug batch.                    |
+| **📱 Omni-Device**      | QR scanning for smartphones + **USSD codes** for feature phones (No internet needed). |
+| **🛡️ Tamper-Proof**     | Decentralized ledger prevents unauthorized alteration of medicine data.               |
+| **🎁 Reward System**    | Users report fakes and earn **ETH rewards**, incentivizing community vigilance.       |
+| **🌍 Africa-First**     | Optimized for low-bandwidth and offline environments.                                 |
 
 ---
 
@@ -68,11 +68,13 @@ In low- and middle-income countries, **1 in 10 medical products** fails quality 
 ## 🛠️ Tech Stack
 
 ### **Frontend & Mobile**
+
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ### **Backend & DLT**
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Base](https://img.shields.io/badge/Base-0052FF?style=for-the-badge&logo=base&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
@@ -83,17 +85,20 @@ In low- and middle-income countries, **1 in 10 medical products** fails quality 
 ## 🚀 Quick Start
 
 ### 1. Verification for Everyone
+
 - **Smartphones:** Open the [User App](https://blocmeds.netlify.app) and scan the medicine's QR code.
 - **Feature Phones:** Dial **`*384#`** (Simulated) and enter the batch ID printed on the pack.
 
 ### 2. Testing the MVP (Demo)
+
 - Use Batch IDs: `AMX2000` or `AMX2001`.
 - In production, QR codes are protected by scratch-off coatings to ensure 1:1 verification.
 
 ### 3. Developer Setup
+
 ```bash
-git clone https://github.com/myusername/blocmeds.git
-cd blocmeds
+git clone https://github.com/Marvellye/BlocMeds.git
+cd BlocMeds
 # Follow individual READMEs in /backend and /frontend
 ```
 
@@ -101,11 +106,11 @@ cd blocmeds
 
 ## ⚖️ Comparison: Why BlocMeds?
 
-| Competitor | Limitations | BlocMeds Advantage |
-| :--- | :--- | :--- |
-| **Sproxil** | Limited traceability, no DLT | Immutable DLT trails + Hybrid USSD/QR |
-| **ScanTrust** | Proprietary/Closed system | **Open Base DLT** + Free Public Verification |
-| **RxAll** | Closed AI model | Transparent, Open-Source DLT |
+| Competitor    | Limitations                  | BlocMeds Advantage                           |
+| :------------ | :--------------------------- | :------------------------------------------- |
+| **Sproxil**   | Limited traceability, no DLT | Immutable DLT trails + Hybrid USSD/QR        |
+| **ScanTrust** | Proprietary/Closed system    | **Open Base DLT** + Free Public Verification |
+| **RxAll**     | Closed AI model              | Transparent, Open-Source DLT                 |
 
 ---
 
