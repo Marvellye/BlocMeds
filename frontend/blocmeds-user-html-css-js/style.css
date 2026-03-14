@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #90EE90, #2E8B57);
+  background: linear-gradient(135deg, #4D4DFF, #0000FF);
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -87,14 +87,14 @@ header {
 
 header h1 {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
-  color: #2E8B57;
+  color: #0000FF;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .balance {
-  background: #90EE90;
+  background: #4D4DFF;
   padding: 0.4rem 0.8rem;
   border-radius: 1rem;
   font-weight: bold;
@@ -148,7 +148,7 @@ header h1 {
 
 .action-card i {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
-  color: #2E8B57;
+  color: #0000FF;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -174,7 +174,7 @@ header h1 {
 .scanner-frame {
   width: 100%;
   height: clamp(200px, 50vw, 300px);
-  border: 2px solid #2E8B57;
+  border: 2px solid #0000FF;
   border-radius: 0.75rem;
   position: relative;
   overflow: hidden;
@@ -208,7 +208,7 @@ header h1 {
 
 /* Buttons */
 button {
-  background: linear-gradient(45deg, #2E8B57, #90EE90);
+  background: linear-gradient(45deg, #0000FF, #4D4DFF);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -225,7 +225,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(45deg, #90EE90, #2E8B57);
+  background: linear-gradient(45deg, #4D4DFF, #0000FF);
   transform: translateY(-2px);
 }
 
@@ -274,7 +274,7 @@ input, textarea {
 }
 
 .badges div {
-  background: #90EE90;
+  background: #4D4DFF;
   padding: 0.75rem;
   border-radius: 50%;
   width: 50px;
@@ -317,7 +317,7 @@ input, textarea {
 .bottom-nav div {
   cursor: pointer;
   text-align: center;
-  color: #2E8B57;
+  color: #0000FF;
   flex: 1;
   padding: 0.5rem;
   font-size: clamp(0.8rem, 2.5vw, 0.9rem);
@@ -362,7 +362,7 @@ input, textarea {
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  background: #2E8B57;
+  background: #0000FF;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -386,7 +386,7 @@ input, textarea {
 
 .spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #2E8B57;
+  border-top: 4px solid #0000FF;
   border-radius: 50%;
   width: 40px;
   height: 40px;

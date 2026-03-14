@@ -26,7 +26,7 @@ The application is a single-file React component (`App.js`) that handles all log
 ### Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/entermyusername/blocmeds-react-app
+   git clone https://github.com/Marvellye/BlocMeds.git
    cd blocmeds-react-app
 2. **Install Dependencies**:
    ```bash

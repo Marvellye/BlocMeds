@@ -32,7 +32,7 @@ export const ProfilePage = ({ user, onUpdateSettings }: ProfilePageProps) => {
     QRCode.toDataURL(referralCode, {
       width: 128,
       margin: 1,
-      color: { dark: "#2E8B57", light: "#FFFFFF" },
+      color: { dark: "#0000FF", light: "#FFFFFF" },
     }).then(setReferralQr);
   }, [referralCode]);
 

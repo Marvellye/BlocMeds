@@ -91,7 +91,7 @@ class _ScanScreenState extends State<ScanScreen> {
           MobileScanner(onDetect: _onDetect),
           if (_isLoading)
             const Center(
-              child: SpinKitCircle(color: Colors.blue, size: 50),
+              child: SpinKitCircle(color: const Color(0xFF0000FF), size: 50),
             ),
         ],
       ),

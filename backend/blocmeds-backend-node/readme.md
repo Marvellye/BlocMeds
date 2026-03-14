@@ -9,7 +9,7 @@ BlocMeds is Africa’s first medicine verification system that uses **Base’s d
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/myusername/blocmeds-backend-node.git
+git clone https://github.com/Marvellye/BlocMeds.git
 cd blocmeds-backend-node
 ```
 

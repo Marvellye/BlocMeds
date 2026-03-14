@@ -28,7 +28,7 @@ export const GeneratePage = ({ onGenerate, generatedHistory }: GeneratePageProps
         width: 256,
         margin: 2,
         color: {
-          dark: "#2E8B57",
+          dark: "#0000FF",
           light: "#FFFFFF",
         },
       });

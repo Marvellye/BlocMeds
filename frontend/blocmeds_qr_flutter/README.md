@@ -50,7 +50,7 @@ results as notification in his phone.
 ### Installation
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/myusername/blocmeds_qr.git
+   git clone https://github.com/Marvellye/BlocMeds.git
    cd blocmeds_qr
    ```
 2. Install Dependencies:

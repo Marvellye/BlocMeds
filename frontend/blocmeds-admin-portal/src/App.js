@@ -140,12 +140,12 @@ const App = () => {
       <h1 style={{ textAlign: 'center', color: '#333', marginBottom: '20px' }}>Drug Batch Upload</h1>
       <div style={{ marginBottom: '20px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 1 ? '#007bff' : '#666' }}>Step 1: Drug Info</div>
-          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 2 ? '#007bff' : '#666' }}>Step 2: Batch Details</div>
-          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 3 ? '#007bff' : '#666' }}>Step 3: Confirmation</div>
+          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 1 ? '#0000FF' : '#666' }}>Step 1: Drug Info</div>
+          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 2 ? '#0000FF' : '#666' }}>Step 2: Batch Details</div>
+          <div style={{ width: '33.33%', textAlign: 'center', color: currentStep === 3 ? '#0000FF' : '#666' }}>Step 3: Confirmation</div>
         </div>
         <div style={{ height: '4px', background: '#ccc', position: 'relative' }}>
-          <div style={{ height: '100%', background: '#007bff', width: `${(currentStep / totalSteps) * 100}%`, transition: 'width 0.3s' }}></div>
+          <div style={{ height: '100%', background: '#0000FF', width: `${(currentStep / totalSteps) * 100}%`, transition: 'width 0.3s' }}></div>
         </div>
       </div>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
@@ -219,7 +219,7 @@ const App = () => {
             type="button"
             onClick={prevStep}
             disabled={currentStep === 1}
-            style={{ padding: '10px 20px', background: currentStep === 1 ? '#ccc' : '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: currentStep === 1 ? 'not-allowed' : 'pointer' }}
+            style={{ padding: '10px 20px', background: currentStep === 1 ? '#ccc' : '#0000FF', color: 'white', border: 'none', borderRadius: '4px', cursor: currentStep === 1 ? 'not-allowed' : 'pointer' }}
           >
             Previous
           </button>
@@ -227,7 +227,7 @@ const App = () => {
             <button
               type="button"
               onClick={nextStep}
-              style={{ padding: '10px 20px', background: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+              style={{ padding: '10px 20px', background: '#0000FF', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
             >
               Next
             </button>

@@ -81,7 +81,7 @@ Built with modern tools and intelligent architecture, **BlocMeds Admin V2** rede
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/myusername/blocmeds-admin-latest-ui.git
+   git clone https://github.com/Marvellye/BlocMeds.git
    cd blocmeds-admin-latest-ui
    ```
 

@@ -39,7 +39,7 @@
 
 1. **Clone the Repo**
 
-   git clone https://github.com/myusername/BlocMeds-Admin-V2.git
+   git clone https://github.com/Marvellye/BlocMeds.git
    cd BlocMeds-Admin-V2
    
 

@@ -273,7 +273,7 @@ function displayScanResult(res, batchId) {
     <strong>Token ID:</strong> ${res.tokenId || 'N/A'}
   `;
   resultEl.innerHTML = content;
-  resultEl.style.background = res.status === 'verified' ? '#90EE90' : res.status === 'fake' ? '#ef4444' : '#ccc';
+  resultEl.style.background = res.status === 'verified' ? '#4D4DFF' : res.status === 'fake' ? '#ef4444' : '#ccc';
   
   if (res.status === 'fake') {
     content += `<div class="button-group"><button onclick="navigateTo('report-page'); document.getElementById('report-batch').value = '${batchId}'; closeModal()">Report Fake</button></div>`;
@@ -305,7 +305,7 @@ function generateQRCode() {
     text: batchId,
     width: 128,
     height: 128,
-    colorDark: '#2E8B57',
+    colorDark: '#0000FF',
     colorLight: '#ffffff'
   });
   user.generatedHistory.push(`Generated QR for ${batchId} at ${new Date().toLocaleString()}`);
