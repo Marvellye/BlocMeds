@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlocMeds QR</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2E8B57">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<body>
+  <div id="app" class="container">
+    <!-- Header -->
+    <header>
+      <h1><i class="fas fa-shield-alt"></i> BlocMeds QR</h1>
+      <div id="balance-display" class="balance">ETH: 0</div>
+      <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <!-- Pages -->
+    <section id="home-page" class="page active">
+      <div class="welcome">Welcome back!</div>
+      <div class="quick-actions">
+        <div class="action-card" onclick="navigateTo('scan-page')"><i class="fas fa-camera"></i> Scan QR</div>
+        <div class="action-card" onclick="navigateTo('generate-page')"><i class="fas fa-plus"></i> Generate QR</div>
+        <div class="action-card" onclick="navigateTo('report-page')"><i class="fas fa-exclamation-triangle"></i> Report Fake</div>
+        <div class="action-card" onclick="navigateTo('rewards-page')"><i class="fas fa-trophy"></i> My Rewards</div>
+      </div>
+      <h2>Recent Activity</h2>
+      <div id="recent-activity" class="feed"></div>
+      <h2>Leaderboard</h2>
+      <div id="leaderboard" class="feed"></div>
+    </section>
+
+    <section id="scan-page" class="page">
+      <div id="reader" class="scanner-frame"></div>
+      <div class="button-group">
+        <button id="start-scan-btn" onclick="startScanner()"><i class="fas fa-camera"></i> Start Scan</button>
+      </div>
+      <div id="scan-result" class="result-card">Awaiting scan...</div>
+      <div id="verification-stats">Scans: 0 | Streak: 0</div>
+    </section>
+
+    <section id="generate-page" class="page">
+      <input type="text" id="batch-input" placeholder="Enter Batch ID">
+      <div class="button-group">
+        <button onclick="generateQRCode()"><i class="fas fa-qrcode"></i> Generate QR</button>
+      </div>
+      <div id="qr-output" class="qr-card"></div>
+      <div class="button-group qr-actions">
+        <button onclick="downloadQRCode()"><i class="fas fa-download"></i> Download</button>
+        <button onclick="shareQRCode()"><i class="fas fa-share-alt"></i> Share</button>
+      </div>
+      <h2>Recent Generated</h2>
+      <div id="generated-history" class="feed"></div>
+    </section>
+
+    <section id="report-page" class="page">
+      <form id="report-form">
+        <input type="text" id="report-batch" placeholder="Batch ID">
+        <input type="text" id="report-location" placeholder="Location">
+        <input type="file" id="report-photos" multiple accept="image/*">
+        <textarea id="report-description" placeholder="Description"></textarea>
+        <input type="text" id="report-store" placeholder="Store Name (optional)">
+        <div class="button-group">
+          <button type="submit"><i class="fas fa-paper-plane"></i> Submit Report</button>
+        </div>
+      </form>
+      <h2>Reports History</h2>
+      <div id="reports-history" class="feed"></div>
+    </section>
+
+    <section id="rewards-page" class="page">
+      <div class="balance-large">ETH Balance: <span id="hbar-balance">0</span></div>
+      <div id="transaction-history" class="feed"></div>
+      <h2>Achievements</h2>
+      <div id="achievements" class="badges"></div>
+      <h2>Referrals</h2>
+      <div id="referral-code">Your Code: BLOCMEDS-123</div>
+    </section>
+
+    <section id="profile-page" class="page">
+      <div class="profile-info">
+        <img id="avatar" src="https://via.placeholder.com/100" alt="">
+        <h2 id="username">User</h2>
+        <div>Trust Score: <span id="trust-score">0</span></div>
+        <div>Total Scans: <span id="total-scans">0</span></div>
+      </div>
+      <h2>Settings</h2>
+      <div class="settings">
+        <label>Notifications: <input type="checkbox" id="notifications"></label>
+        <label>Dark Mode: <input type="checkbox" id="dark-mode-setting"></label>
+        <div class="button-group">
+          <button onclick="exportData()">Export Data</button>
+          <button id="install-btn" style="display: none;"><i class="fas fa-download"></i> Install App</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div onclick="navigateTo('home-page')"><i class="fas fa-home"></i> Home</div>
+      <div onclick="navigateTo('scan-page')"><i class="fas fa-camera"></i> Scan</div>
+      <div onclick="navigateTo('generate-page')"><i class="fas fa-qrcode"></i> Generate</div>
+      <div onclick="navigateTo('report-page')"><i class="fas fa-exclamation-triangle"></i> Report</div>
+      <div onclick="navigateTo('profile-page')"><i class="fas fa-user"></i> Profile</div>
+    </nav>
+
+    <!-- Modals, Toast, Loading -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="loading" class="loading-spinner">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="script.js"></script>
+</body>
+</html>
