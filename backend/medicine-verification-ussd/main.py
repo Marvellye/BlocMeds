@@ -1,10 +1,9 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-import firebase_admin
-from firebase_admin import credentials, firestore
 import os
 from dotenv import load_dotenv
+from supabase import create_client, Client
 
 # Load environment variables
 load_dotenv()
@@ -12,26 +11,34 @@ BASE_ACCOUNT_ID = os.getenv("BASE_ACCOUNT_ID", "Enter Account ID")
 BASE_PRIVATE_KEY = os.getenv("BASE_PRIVATE_KEY", "Enter Private Key")
 DRUG_VERIFICATION_TOPIC_ID = os.getenv("DRUG_VERIFICATION_TOPIC_ID")
 
-# Initialize Firebase
-cred = credentials.Certificate(r"C:\Users\Gezawa\Documents\New folder (16)\drug-verification-ussd\serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+# Initialize Supabase
+url: str = os.getenv("SUPABASE_URL")
+key: str = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+supabase: Client = create_client(url, key)
 
 # Simulated Base check (to be replaced with actual SDK logic)
 def verify_drug_on_chain(batch_id):
-    # Placeholder for Base logic using Testnet (replace with real SDK calls)
+    # Placeholder for Base logic
     base_verified_batches = ["ABC123", "XYZ789"]
     return "Verified" if batch_id in base_verified_batches else "Unverified"
 
-# Firebase drug metadata lookup
+# Supabase drug metadata lookup
 def get_drug_status(batch_id):
     try:
-        doc_ref = db.collection("drugs").document(batch_id)
-        doc = doc_ref.get()
-        if doc.exists:
-            return doc.to_dict()
+        response = supabase.table("drugs").select("*").eq("batch_id", batch_id).execute()
+        if response.data:
+            data = response.data[0]
+            return {
+                "drugName": data.get("drug_name"),
+                "batchId": data.get("batch_id"),
+                "manufacturer": data.get("manufacturer"),
+                "expiry": data.get("expiry"),
+                "tokenId": data.get("token_id"),
+                "status": data.get("status")
+            }
     except Exception as e:
-        logging.error(f"Firebase error: {e}")
+        import logging
+        logging.error(f"Supabase error: {e}")
     return None
 
 # Initialize FastAPI app
