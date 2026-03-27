@@ -75,7 +75,7 @@ const App = () => {
     }
     setLoading(true);
     try {
-      const response = await fetch('https://blocmeds-backend-production.up.railway.app/api/drugs/upload', {
+      const response = await fetch('https://blocmeds-backend.onrender.com/api/drugs/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

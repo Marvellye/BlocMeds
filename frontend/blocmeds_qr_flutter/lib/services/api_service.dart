@@ -5,7 +5,7 @@ class ApiService {
   static Future<Map<String, dynamic>> verifyBatch(String batchId) async {
     batchId = batchId.trim().toUpperCase();
     final url =
-        'https://blocmeds-backend-production.up.railway.app/api/drugs/verify/$batchId';
+        'https://blocmeds-backend.onrender.com/api/drugs/verify/$batchId';
     print('Calling API: $url');
 
     try {

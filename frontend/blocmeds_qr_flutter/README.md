@@ -1,4 +1,3 @@
-
 # BlocMeds QR: Secure Drug/Medicine Verification with Base DLT
 
 BlocMeds QR is a Flutter-based mobile application designed to combat counterfeit pharmaceuticals by enabling users to verify drug authenticity through QR code scanning, powered by the Base Distributed Ledger Technology (DLT). With a modern interface, seamless API integration, and a gamified rewards system, BlocMeds QR ensures transparency in the pharmaceutical supply chain while incentivizing user participation.
@@ -19,7 +18,7 @@ results as notification in his phone.
 - Fake Drug Reporting: Report suspicious drugs to enhance supply chain integrity, with rewards for community contributions.
 - Tokenized Incentives: Earn ETH tokens and achievements (e.g., "First Scan", "5 Day Streak") for verifying and reporting drugs.
 - User Profiles: Track balance, scan history, reports, and trust score using Hive for persistent storage.
-- Real-Time Verification: Integrates with a live API (https://blocmeds-backend-production.up.railway.app) for instant results.
+- Real-Time Verification: Integrates with a live API (https://blocmeds-backend.onrender.com) for instant results.
 - Modern UI: Material 3 design with light/dark themes and Lottie animations for a user-friendly experience.
 
 ## Technical Stack
@@ -42,12 +41,14 @@ results as notification in his phone.
 ## Getting Started
 
 ### Prerequisites
+
 - Flutter SDK: >=3.0.0 <4.0.0
 - Development Environment: Android Studio or VS Code
 - Device: Android device/emulator (API 34 recommended)
 - Git: For cloning the repository
 
 ### Installation
+
 1. Clone the Repository:
    ```bash
    git clone https://github.com/Marvellye/BlocMeds.git
@@ -75,6 +76,7 @@ results as notification in his phone.
    ```
 
 ### Configuration
+
 - Android Permissions (android/app/src/main/AndroidManifest.xml):
   ```xml
   <uses-permission android:name="android.permission.CAMERA" />
@@ -92,6 +94,7 @@ results as notification in his phone.
   ```
 
 ## How It Works
+
 1. Home Screen: Navigate using quick action buttons (Scan QR, Generate QR, Report Fake) or the bottom navigation bar.
 2. Scan QR: Scan a drug’s QR code to verify authenticity via the Base-backed API. Valid codes (e.g., RX-2024-001A) display,like in example below:
    ```
@@ -108,10 +111,11 @@ results as notification in his phone.
 5. Rewards & Profile: View ETH balance, scan/report history, and achievements in the profile section.
 
 ## Testing the App
+
 - Sample QR Code: Generate a QR code with RX-2024-001A using QR Code Generator (https://www.qr-code-generator.com).
 - API Testing:
   ```bash
-  curl https://blocmeds-backend-production.up.railway.app/api/drugs/verify/RX-2024-001A
+  curl https://blocmeds-backend.onrender.com/api/drugs/verify/RX-2024-001A
   ```
 - Emulator: Test on Pixel 6 (API 34) with camera enabled.
 - Debugging: Run with verbose output:
@@ -120,11 +124,12 @@ results as notification in his phone.
   ```
 
 ## Real-World Impact
+
 BlocMeds QR addresses the global issue of counterfeit drugs, which endanger millions of lives annually. By leveraging Base’s DLT, the app ensures immutable and transparent verification of drug authenticity, fostering trust in the pharmaceutical supply chain. The tokenized rewards system incentivizes user participation, creating a community-driven approach to healthcare safety.
 
 ## Future Enhancements
+
 - Offline Verification: Cache API responses for offline functionality.
 - Analytics Dashboard: Visualize user trust scores and scan trends.
 - Global Accessibility: Implement multi-language support and localization.
 - And Many More.
-

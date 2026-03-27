@@ -56,7 +56,7 @@ export const mockVerify = (batchId: string): DrugVerificationResult => {
 export const verifyDrug = async (batchId: string): Promise<DrugVerificationResult> => {
   try {
     const response = await fetch(
-      `https://blocmeds-backend-production.up.railway.app/api/drugs/verify/${batchId}`
+      `https://blocmeds-backend.onrender.com/api/drugs/verify/${batchId}`
     );
     
     if (!response.ok) {

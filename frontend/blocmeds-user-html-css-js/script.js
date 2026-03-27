@@ -211,7 +211,7 @@ function stopScanner() {
 // Real API Verification for QR Scanning
 async function verifyCode(batchId) {
   try {
-    const response = await fetch(`https://blocmeds-backend-production.up.railway.app/api/drugs/verify/${encodeURIComponent(batchId)}`, {
+    const response = await fetch(`https://blocmeds-backend.onrender.com/api/drugs/verify/${encodeURIComponent(batchId)}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     });
